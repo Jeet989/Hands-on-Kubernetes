@@ -1,0 +1,24 @@
+{
+  "name": "container2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://source.developers.google.com/p/cloud-assignment-3-389918/r/container2"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.4.0",
+    "body-parser": "^1.20.2",
+    "csv-parse": "^5.4.0",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.22"
+  }
+}

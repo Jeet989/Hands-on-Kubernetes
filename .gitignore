@@ -1,0 +1,28 @@
+# Terraform
+*.tfstate
+*.tfstate.*
+crash.log
+*.tfvars
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraform/
+.terraform.lock.hcl
+
+# Kubernetes
+*.kube/config
+*.kube/cache
+*.kube/http-cache
+*.kube/config.yaml
+*.kube/config.yml
+
+# General IaC
+*.bak
+*.backup
+*.swp
+*.tmp
+*.log
+.DS_Store
+
+terraform/credentials.json

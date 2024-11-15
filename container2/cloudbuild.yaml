@@ -1,0 +1,12 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'build', '-t', 'northamerica-northeast1-docker.pkg.dev/cloud-assignment-3-389918/container2/container2:$SHORT_SHA', '-t','northamerica-northeast1-docker.pkg.dev/cloud-assignment-3-389918/container2/container2:latest','.' ]
+- name: "gcr.io/cloud-builders/docker"
+  args: ['push', 'northamerica-northeast1-docker.pkg.dev/cloud-assignment-3-389918/container2/container2:$SHORT_SHA']
+- name: "gcr.io/cloud-builders/docker"
+  args: ['push', 'northamerica-northeast1-docker.pkg.dev/cloud-assignment-3-389918/container2/container2:latest']
+- name: "gcr.io/cloud-builders/kubectl"
+  args: ['set', 'image', 'deployment/cloud-assignment-3-deployment', 'container2=northamerica-northeast1-docker.pkg.dev/cloud-assignment-3-389918/container2/container2:$SHORT_SHA']
+  env:
+    - 'CLOUDSDK_COMPUTE_ZONE=us-east1'
+    - 'CLOUDSDK_CONTAINER_CLUSTER=cloud-assignment-3-terraform-2'

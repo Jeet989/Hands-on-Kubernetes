@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: cloud-assignment-3-loadbalancer
+spec:
+  type: LoadBalancer
+  selector:
+    app: cloud-assignment-3
+  ports:
+  - protocol: TCP
+    name: container1
+    port: 60000
+    targetPort: 3000
